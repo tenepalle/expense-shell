@@ -9,7 +9,7 @@ cd /app
 unzip /tmp/backend.zip
 cd /app
 npm install
+mysql -h <mysql-dev.nidhisolutions.online> -uroot -pExpenseApp@1 < /app/schema/backend.sql
 systemctl demon reload
 systemctl enable backend
 systemctl restart backend
-mysql -h <mysql-dev.nidhisolutions.online> -uroot -pExpenseApp@1 < /app/schema/backend.sql
