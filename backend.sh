@@ -10,7 +10,8 @@ unzip /tmp/backend.zip
 cd /app
 npm install
 dnf install mysql -y
+systemctl daemon-reload
 mysql -h mysql-dev.nidhisolutions.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
-systemctl demon reload
+systemctl daemon reload
 systemctl enable backend
 systemctl restart backend
